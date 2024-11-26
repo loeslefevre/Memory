@@ -1,0 +1,154 @@
+body, html {
+  margin: auto;
+  background-color: #EAFAF1;
+  padding: 10px;
+  font-family: monospace, "Helvetica Nueue", Arial, sans-serif;
+  height: 100%;
+  color: #97a390;
+}
+
+h1 {
+  text-align: center;
+  font-size: xx-large;
+  color: #97a390;
+}
+
+#start_page{
+  height: 100%;
+  display: flex;       
+}
+
+.levelknop{
+  margin-bottom: 10px;  /* voegt ruimte toe tussen knoppen */
+  margin-left: 75px;  
+  border: none;
+  font-family: monospace, "Helvetica Nueue", Arial, sans-serif;
+  background-color: #97a390;  
+  color: #ffffff;           
+  padding: 10px 20px;         
+  cursor:pointer;            
+}
+
+.levelknop:hover {
+  background-color:#586253;
+}
+  
+.tekst{
+  margin-left: 75px;
+}
+
+#start_page > .levelknoppen{
+  margin-left: 35px;
+  display: flex;
+  font-size: large;
+  flex-direction: column;    /* zorgt ervoor dat levelknop verticaal blijven */
+}
+
+#kameleon img {
+  display: flex;
+  margin-left: 155px;
+  width: 700px;
+  height: 400px;
+  object-fit: cover;
+  justify-content: center;  
+  align-items: center;
+}
+
+.stop_buttons{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column; 
+}
+.quit_and_reset{
+  margin-bottom: 10px;  
+  font-family: monospace, "Helvetica Nueue", Arial, sans-serif;
+  margin-left: 150px;  
+    
+  background-color: #97a390; 
+  color: #ffffff;            
+  padding: 10px 20px;   
+  cursor: pointer;    
+  font-size: large;
+  width: 100px;               
+  border: none;
+}
+.quit_and_reset:hover {
+  background-color:#586253; 
+}
+
+
+#memoryboard_turn_indicator {
+text-align: center;
+margin-left: 50px;
+}
+
+#memoryboard td {
+width: 100px;
+height: 100px;
+border: 4px solid #97a390;
+padding: 8px;
+cursor: pointer;
+position: relative;                       /* chatGPT --> nodig voor positionering back en front */
+}
+
+.front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;            /* chatGPT--> verbergt de achterkant wanneer deze omgedraaid is */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent; 
+  transition: transform 0.5s; 
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #b7c5af; 
+  transform: rotateY(180deg);             /* chatGPT--> achterkant draait 180 graden */
+}
+
+#score_board{
+  width: 175px;
+  font-family: monospace, "Helvetica Nueue", Arial, sans-serif;
+  margin-top: 50px;   
+  margin-left: 50px;
+}
+
+th {
+  background-color: #97a390;
+  color: #ffffff;  
+  padding: 12px;
+  text-align: center;
+}
+
+td {
+  background-color: #b7c5af;
+  color: #ffffff;  
+  padding: 10px;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+
+#end_page {
+  position: relative; 
+  padding-top: 50px;  
+}
+
+#tekst_end_page {
+  position: absolute; 
+  top: 0;             
+  left: 50%;                               
+  transform: translateX(-50%);             /* chatGPT--> voor positionering tekst*/
+  font-size: 18px;   
+  color: #97a390;     
+  text-align: center; 
+}

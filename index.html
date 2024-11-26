@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <script src="pagina_updates.js"></script> 
+        <script src="create_memoryboard.js"></script>
+        <script src="cell_click.js"></script> 
+        <title>Memory game</title>
+    </head>
+    <body>
+        <h1>Memory</h1> 
+        <div id="start_page">     
+            <div class="levelknoppen">
+                <p class="tekst">levels</p>
+                <button class = "levelknop"
+                onclick="show_game_page(2,3, 0)">level 1</button>   
+                <button class = "levelknop"
+                onclick="show_game_page(3,4, 0)">level 2</button> 
+                <button class = "levelknop"
+                onclick="show_game_page(4,5, 0)">level 3</button> 
+                <p class="tekst">voorbeeldlevels</p>                   
+                <button class = "levelknop"
+                onclick="show_game_page(2,3, 1)">level 1</button>       
+                <button class = "levelknop"
+                onclick="show_game_page(3,4, 1)">level 2</button> 
+                <button class = "levelknop"
+                onclick="show_game_page(4,5, 1)">level 3</button> 
+            </div>
+            <div id= "kameleon" ><img src="https://i.postimg.cc/WbMn1WFZ/kameleon-nieuw.png" alt="afbeelding kameleon" width="700" height="400"></div>
+        </div> 
+
+        <div id="game_page">
+
+            <div class="stop_buttons" >
+                <button class = "quit_and_reset"
+                onclick="quit()">quit</button> 
+                <button class = "quit_and_reset"
+                onclick="reset_game_page(current_rows, current_cols)">reset</button> 
+                <button class = "quit_and_reset"
+                onclick="cheat()">cheat</button> 
+            </div>
+
+            <div id="memoryboard_turn_indicator">
+                <table id="memoryboard">  
+                </table>
+                <p id="turn_indicator">Speler <span id="current_player"></span> is aan zet!</p> 
+            </div>
+
+            <div id="score_board">
+                <table>
+                    <tr>
+                        <th>player</th>
+                        <th>score</th>
+                    </tr>
+                    <tr>
+                        <td>player 1</td>
+                        <td id= "score_p1" ></td>
+                    </tr>
+                    <tr>
+                        <td>player 2</td>
+                        <td id= "score_p2"></td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>    
+        <div id="end_page">
+            <p id="tekst_end_page">Speler <span id="winner_announcement">999</span> met een score van <span id="score_result">999</span> / <span id="total_score">999</span>!</p> 
+        
+            <div class="stop_buttons" >
+                <button class = "quit_and_reset"
+                onclick="quit()">quit</button>  
+                <button class = "quit_and_reset"
+                onclick="reset_game_page(current_rows, current_cols)">reset</button> 
+            </div>
+            <div id= "kameleon" ><img src="https://i.postimg.cc/8CYG0MbN/kameleon-eind.png" alt="afbeelding kameleon" width="700" height="400"></div>
+           
+        </div>   
+    </body>
+</html>
+
